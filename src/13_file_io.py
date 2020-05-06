@@ -10,6 +10,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
+file = open('foo.txt', 'r')
+print(file.read())
+file.close
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -17,3 +20,11 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+bar = open('bar.txt', 'w')
+bar.write("iOS 12 is the best iOS")
+bar.write("Labs 22 is the best Labs")
+bar.write("CS 29 is the best CS")
+bar.close()
+openFile = open('bar.txt', 'r')
+print(openFile.read())
+openFile.close()
